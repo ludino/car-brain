@@ -1,21 +1,23 @@
 #ifndef car_brain_cell_h
 #define car_brain_cell_h
 
+#include <iostream>
+
 class Cell {
 
 public:
     int number_of_input;
     
     Cell();
-    bool giveSignal(int );
+    bool giveSignal(int cell_id);
 
 private:
     bool sendSignal(int cell_id);
 
-}
+};
  
 #endif
- 
+ /*
  
  Port a, b, c, d, e;
  
@@ -47,4 +49,4 @@ private:
  }
  }
 
-#endif
+#endif*/
