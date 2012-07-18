@@ -1,5 +1,0 @@
-Test Thomas
-
-Oppdatert med linjeskift
-
-// File renamed
