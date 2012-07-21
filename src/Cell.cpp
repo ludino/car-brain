@@ -3,8 +3,7 @@
 /*
  Generate a tree of ports and place it in mainPort
  */
-Cell::Cell(Cell *cell_list, int number_of_cells, int *seeds, 
-     int number_of_seeds) 
+Cell::Cell(Cell *cell_list, int number_of_cells, Gene gene) 
 {
     
 }

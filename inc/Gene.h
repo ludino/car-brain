@@ -6,9 +6,12 @@
 class Gene {
 
 public:
-    int numer_of_seeds;
-    int *seeds;
+    long long numer_of_seeds;
+    long long recipient_generator_seed;
+    char *seeds;
     
+    Gene(long long numer_of_seeds, long long recipient_generator_seed,
+         char *seeds);
 };
 
 #endif

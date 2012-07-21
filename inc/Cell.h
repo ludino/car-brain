@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Port.h"
+#include "Gene.h"
 
 class Cell {
 
@@ -12,8 +13,7 @@ public:
     bool *inputs;           // List if input signals
     Cell *cell_list;         // List of all the cells in the brain
     
-    Cell(Cell *cell_list, int number_of_cells, int *seeds, 
-         int number_of_seeds);
+    Cell(Cell *cell_list, int number_of_cells, Gene gene);
 
     void setSignal(int cell_id);    // Method for other cells 
                                     // to give this a signal

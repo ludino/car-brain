@@ -6,7 +6,7 @@
 class Port { 
     
 public:
-    enum PortType { AND, OR, XOR };
+    enum PortType { AND = 0, OR, XOR };
     
     PortType port_type;      // Type of port
     bool *signal;           // Pointer to a signal in a cell

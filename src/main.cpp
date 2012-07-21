@@ -7,6 +7,6 @@
 int main(int argc, const char * argv[]) {
     
     Brain myBrain;
-    std::cout << "Hello brain\n";
+    std::cout << "Hello brain: " << sizeof(long long) << "\n";
     return 0;
 }
