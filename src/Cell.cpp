@@ -1,9 +1,15 @@
 #include "cell.h"
 
+Cell::Cell(Cell *cell_list, int number_of_cells) 
+{
+    this->cell_list = cell_list;
+    this->number_of_cells = number_of_cells;
+}
+
 /*
  Generate a tree of ports and place it in mainPort
  */
-Cell::Cell(Cell *cell_list, int number_of_cells, Gene gene) 
+bool Cell::applyGene(Gene gene)
 {
     
 }

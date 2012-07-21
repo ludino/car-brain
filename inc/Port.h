@@ -12,7 +12,7 @@ public:
     bool *signal;           // Pointer to a signal in a cell
     Port *next_port;         // Pointer to the next port
     
-    Port(PortType port_type);
+    Port(PortType port_type, bool *signal);
     
     bool getOutput();       // The boolean operation between signal 
                             // and nextPort.getOutput()

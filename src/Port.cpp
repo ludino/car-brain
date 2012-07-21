@@ -3,9 +3,11 @@
 /*
  Set "portType"'s value
  */
-Port::Port(PortType port_type) 
+Port::Port(PortType port_type, bool *signal) 
 {
-    
+    this->signal = signal;
+    this->port_type = port_type;
+    next_port = NULL;
 }
 
 /*
