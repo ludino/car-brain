@@ -18,20 +18,20 @@ Port::Port(PortType port_type, bool *signal)
  */
 bool Port::getOutput()
 {
-    bool signal2;
+    bool input2;
     if (next_port == NULL) 
     {
-        signal2 = signal[1];
+        input2 = signal[1];
     }
     else 
     {
-        signal2 = next_port->getOutput();
+        input2 = next_port->getOutput();
     }
     switch (port_type) 
     {
-        case AND:   return (*signal && signal2);
-        case OR:    return (*signal || signal2);
-        case XOR:   return (*signal ^ signal2);
+        case AND:   return (*signal && input2);
+        case OR:    return (*signal || input2);
+        case XOR:   return (*signal ^ input2);
     }
     return false;
 }
