@@ -11,7 +11,7 @@ Cell::Cell(Cell *cell_list, int number_of_cells)
  */
 bool Cell::applyGene(Gene gene)
 {
-    
+    return false;
 }
 
 /*
@@ -25,7 +25,8 @@ void Cell::setSignal(int cell_id)
 
 /*
  Chekt the output from "mainPort" (which will traverse through all
- ports) and set "send_signals_next_time" accordingly
+ ports) and set "send_signals_next_time" accordingly.
+ Will also reset all "input" to 0
  */
 void Cell::process()
 {

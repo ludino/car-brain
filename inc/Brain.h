@@ -8,7 +8,7 @@ class Brain {
 
 public:
     int number_of_cells;    // Number of cells in this Brain
-    Cell *cell_list;        // 
+    Cell *cell_list;        // list of all the cells in the brain
     
     Brain();
     
