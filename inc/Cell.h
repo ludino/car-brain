@@ -2,51 +2,43 @@
 #define car_brain_cell_h
 
 #include <iostream>
+#include "Port.h"
 
 class Cell {
 
 public:
-    int number_of_input;
+    int id;                 // This cells id
+    int number_of_input;    // Number of input ports
+    bool *inputs;           // List if input signals
+    Cell *cell_list;         // List of all the cells in the brain
     
-    Cell();
-    bool giveSignal(int cell_id);
+    Cell(Cell *cell_list, int number_of_cells, int *seeds, 
+         int number_of_seeds);
+
+    void setSignal(int cell_id);    // Method for other cells 
+                                    // to give this a signal
+    
+    void process();                 // Method for the brain to tell
+                                    // this cell to process all received
+                                    // signals, and generate the list
+                                    // of cells which this cell will 
+                                    // signal
+    
+    void sendSignal(int cell_id);   // Method for the brain to tell this
+                                    // cell to send signals to all cells
+                                    // in the list "outputs"
 
 private:
-    bool sendSignal(int cell_id);
+    int number_of_outputs;          // Number of cells this cell will
+                                    // send signals to
+    
+    Cell **outputs;                 // List of Cells this cell will
+                                    // send signals to 
+    
+    bool send_signals_next_time;    // Whether sendSignal() whould send
+                                    // signals or not
 
+    Port *main_port;                 // The main port for this cell
 };
  
 #endif
- /*
- 
- Port a, b, c, d, e;
- 
- 
- 
- class EnTypeCelle {
- perform_action() {
- if (signal_1 && signal_2) ^ (signal_3, signal_4))) {
- send_output_signal();
- }
- }
- }
- 
- 
- class EnAnnenTypeCelle {
- 
- int number_of_input = 4;
- bool *signal = new bool[number_of_input];
- 
- getSignal(int id) {
- int signal_id = id % numer_of_input;
- signal[signal_id] = true;
- }
- 
- perform_action() {
- if (a && b) ^ (a || c) {
- send_output_signal();
- }
- }
- }
-
-#endif*/

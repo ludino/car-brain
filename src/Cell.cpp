@@ -1,13 +1,36 @@
 #include "cell.h"
 
-Cell::Cell() {
+/*
+ Generate a tree of ports and place it in mainPort
+ */
+Cell::Cell(Cell *cell_list, int number_of_cells, int *seeds, 
+     int number_of_seeds) 
+{
     
 }
 
-bool Cell::giveSignal(int cell_id) {
-    return true;
+/*
+ Calcuate, based on cell_id, which signal in "input" which 
+ should be set to true
+ */
+void Cell::setSignal(int cell_id)
+{
+    
 }
 
-bool Cell::sendSignal(int cell_id) {
-    return false;
+/*
+ Chekt the output from "mainPort" (which will traverse through all
+ ports) and set "send_signals_next_time" accordingly
+ */
+void Cell::process()
+{
+    
+}
+
+/*
+ Run setSignal() on all cells in "outputs"
+ */
+void Cell::sendSignal(int cell_id)
+{
+    
 }
