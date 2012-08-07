@@ -9,8 +9,6 @@ int main(int argc, const char * argv[]) {
     Brain myBrain;
     std::cout << "Hello brain\n";
 
-
-
 	std::cout << "\nPress Enter to exit. . .\n";
 	std::cin.get();
     return 0;

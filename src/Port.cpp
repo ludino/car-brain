@@ -3,9 +3,11 @@
 /*
  Set "portType"'s value
  */
-Port::Port(PortType port_type) 
+Port::Port(PortType port_type, bool *signal) 
 {
-    
+    this->signal = signal;
+    this->port_type = port_type;
+    next_port = NULL;
 }
 
 /*
@@ -16,5 +18,20 @@ Port::Port(PortType port_type)
  */
 bool Port::getOutput()
 {
+    bool input2;
+    if (next_port == NULL) 
+    {
+        input2 = signal[1];
+    }
+    else 
+    {
+        input2 = next_port->getOutput();
+    }
+    switch (port_type) 
+    {
+        case AND:   return (*signal && input2);
+        case OR:    return (*signal || input2);
+        case XOR:   return (*signal ^ input2);
+    }
     return false;
 }

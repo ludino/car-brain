@@ -1,12 +1,17 @@
 #include "cell.h"
 
+Cell::Cell(Cell *cell_list, int number_of_cells) 
+{
+    this->cell_list = cell_list;
+    this->number_of_cells = number_of_cells;
+}
+
 /*
  Generate a tree of ports and place it in mainPort
  */
-Cell::Cell(Cell *cell_list, int number_of_cells, int *seeds, 
-     int number_of_seeds) 
+bool Cell::applyGene(Gene gene)
 {
-    
+    return false;
 }
 
 /*
@@ -20,7 +25,8 @@ void Cell::setSignal(int cell_id)
 
 /*
  Chekt the output from "mainPort" (which will traverse through all
- ports) and set "send_signals_next_time" accordingly
+ ports) and set "send_signals_next_time" accordingly.
+ Will also reset all "input" to 0
  */
 void Cell::process()
 {
